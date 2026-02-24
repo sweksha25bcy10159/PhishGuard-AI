@@ -73,6 +73,6 @@ PhishGuard-AI/
 
 
 # TEAM - THREATOPS
-pragya lodhi 
-Sweksha Kakkar  
-sonam
+1.pragya lodhi 
+2.Sweksha Kakkar  
+3.sonam
