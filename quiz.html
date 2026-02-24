@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Phish Challenge | PhishGuard</title>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Roboto:wght@300;400&display=swap" rel="stylesheet">
+    <style>
+        body {
+            background-color: #0a192f;
+            color: #ccd6f6;
+            font-family: 'Roboto', sans-serif;
+            text-align: center;
+            padding: 40px;
+        }
+
+        h2 { font-family: 'Orbitron', sans-serif; color: #64ffda; }
+
+        .quiz-container {
+            max-width: 700px;
+            margin: 40px auto;
+            background: #112240;
+            padding: 30px;
+            border-radius: 15px;
+            border: 1px solid #233554;
+        }
+
+        .scenario-box {
+            background: #0a192f;
+            padding: 20px;
+            border-radius: 10px;
+            margin-bottom: 25px;
+            text-align: left;
+            border-left: 4px solid #64ffda;
+        }
+
+        .options {
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+        }
+
+        .btn {
+            padding: 15px 35px;
+            font-family: 'Orbitron', sans-serif;
+            font-weight: bold;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        .btn-safe { background: #64ffda; color: #0a192f; }
+        .btn-phish { background: #ff4d4d; color: #ffffff; }
+
+        .btn:hover { transform: scale(1.05); opacity: 0.9; }
+
+        #feedback {
+            margin-top: 25px;
+            font-weight: bold;
+            min-height: 50px;
+        }
+
+        .next-step {
+            margin-top: 30px;
+            display: none;
+        }
+
+        .proceed-link {
+            color: #64ffda;
+            text-decoration: none;
+            font-weight: bold;
+            border-bottom: 1px solid #64ffda;
+        }
+    </style>
+</head>
+<body>
+
+    <h2>CHALLENGE: SPOT THE PHISH</h2>
+    <p>Look at the scenario below and decide. Is it a trap?</p>
+
+    <div class="quiz-container">
+        <div class="scenario-box">
+            <strong>FROM:</strong> security-alert@amaxon-support.net <br>
+            <strong>SUBJECT:</strong> Urgent: Your account will be suspended! <br><br>
+            "Dear User, we noticed unusual activity. Click here to verify your identity: <u>http://bit.ly/update-acc-2026</u>"
+        </div>
+
+        <div class="options">
+            <button class="btn btn-safe" onclick="check(false)">LEGITIMATE</button>
+            <button class="btn btn-phish" onclick="check(true)">PHISHING</button>
+        </div>
+
+        <div id="feedback"></div>
+
+        <div class="next-step" id="nextStep">
+            <p>Ready to protect yourself in the real world?</p>
+            <a href="scanner.html" class="proceed-link">GOTO AI SCANNER →</a>
+        </div>
+    </div>
+
+    <script>
+        function check(isPhish) {
+            const feedback = document.getElementById('feedback');
+            const nextStep = document.getElementById('nextStep');
+
+            if(isPhish) {
+                feedback.innerHTML = "<span style='color: #64ffda;'>CORRECT!</span><br>Red Flags: Fake domain (@amaxon.net), Urgent tone, and a shorted bit.ly link.";
+                nextStep.style.display = "block";
+            } else {
+                feedback.innerHTML = "<span style='color: #ff4d4d;'>WRONG!</span><br>This is a classic phishing attempt. Look at the spelling of 'Amaxon' and the suspicious link.";
+            }
+        }
+    </script>
+
+</body>
+</html>

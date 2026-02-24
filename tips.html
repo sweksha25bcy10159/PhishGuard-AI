@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Security Deep Dive | PhishGuard</title>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Roboto:wght@300;400&display=swap" rel="stylesheet">
+    <style>
+        body { background-color: #0a192f; color: #ccd6f6; font-family: 'Roboto', sans-serif; margin: 0; padding-top: 100px; text-align: center; }
+        .nav-bar { position: fixed; top: 0; width: 100%; background: #112240; padding: 20px 0; border-bottom: 1px solid #64ffda; z-index: 100; }
+        .nav-bar a { color: #64ffda; text-decoration: none; margin: 0 15px; font-family: 'Orbitron'; font-size: 0.8rem; }
+        .container { max-width: 900px; margin: 0 auto; display: grid; grid-template-columns: 1fr 1fr; gap: 20px; padding: 20px; }
+        .tip-card { background: #112240; padding: 25px; border-radius: 10px; border: 1px solid #233554; text-align: left; transition: 0.3s; }
+        .tip-card:hover { border-color: #64ffda; transform: scale(1.02); }
+        .tip-card h3 { color: #64ffda; font-family: 'Orbitron'; font-size: 0.9rem; margin-top: 0; }
+        .btn-next { display: inline-block; margin: 40px; color: #64ffda; text-decoration: none; border: 1px solid #64ffda; padding: 10px 30px; font-family: 'Orbitron'; border-radius: 5px; }
+    </style>
+</head>
+<body>
+    <div class="nav-bar">
+        <a href="index.html">HOME</a> <a href="awareness.html">AWARENESS</a> <a href="quiz.html">QUIZ</a> <a href="scanner.html">SCANNER</a> <a href="report.html">REPORT</a>
+    </div>
+    <h2>SECURITY DEEP DIVE</h2>
+    <div class="container">
+        <div class="tip-card">
+            <h3>Password Hygiene</h3>
+            <p>Don't use passwords, use passphrases. 12+ characters with symbols are the 2026 security standards.</p>
+        </div>
+        <div class="tip-card">
+            <h3>Hardware MFA</h3>
+            <p>Move away from SMS OTPs. Use physical security keys (U2F) to prevent session hijacking.</p>
+        </div>
+    </div>
+    <a href="about.html" class="btn-next">MEET THE TEAM →</a>
+</body>
+</html>

@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Awareness Hub | PhishGuard</title>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Roboto:wght@300;400&display=swap" rel="stylesheet">
+    <style>
+        body {
+            background-color: #0a192f;
+            color: #ccd6f6;
+            font-family: 'Roboto', sans-serif;
+            margin: 0;
+            padding: 40px;
+        }
+
+        h2 { font-family: 'Orbitron', sans-serif; color: #64ffda; text-align: center; }
+
+        .grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+            max-width: 900px;
+            margin: 40px auto;
+        }
+
+        .card {
+            background: #112240;
+            padding: 25px;
+            border-radius: 10px;
+            border: 1px solid #233554;
+        }
+
+        .card h3 { color: #64ffda; margin-top: 0; }
+        
+        ul { padding-left: 20px; }
+        li { margin-bottom: 10px; line-height: 1.4; }
+
+        .do { border-left: 4px solid #64ffda; }
+        .dont { border-left: 4px solid #ff4d4d; }
+
+        .proceed-box {
+            text-align: center;
+            margin-top: 50px;
+            padding: 30px;
+            background: rgba(100, 255, 218, 0.05);
+            border-radius: 10px;
+        }
+
+        .cta-btn {
+            padding: 15px 40px;
+            background: #64ffda;
+            color: #0a192f;
+            text-decoration: none;
+            font-family: 'Orbitron', sans-serif;
+            font-weight: bold;
+            border-radius: 5px;
+            display: inline-block;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+
+    <h2>CYBER DEFENSE STRATEGY</h2>
+    <p style="text-align: center;">Before you use our AI, understand the basics of Phishing defense.</p>
+
+    <div class="grid">
+        <div class="card do">
+            <h3>✅ DO'S</h3>
+            <ul>
+                <li>Always check the sender's full email address.</li>
+                <li>Enable Multi-Factor Authentication (MFA).</li>
+                <li>Look for "https://" and the padlock icon.</li>
+                <li>Report suspicious links to authorities.</li>
+            </ul>
+        </div>
+
+        <div class="card dont">
+            <h3>❌ DON'TS</h3>
+            <ul>
+                <li>Don't click on links from unknown SMS or Emails.</li>
+                <li>Don't share OTPs or Passwords with anyone.</li>
+                <li>Don't trust "Urgent" or "Threatening" messages.</li>
+                <li>Don't download attachments from unverified sources.</li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="proceed-box">
+        <h3>READY TO TEST A SUSPICIOUS LINK?</h3>
+        <p>If you have received a message that looks like a fraud, use our AI Scanner to analyze it.</p>
+        <a href="quiz.html" class="cta-btn">TAKE THE CHALLENGE</a>
+    </div>
+
+</body>
+</html>
